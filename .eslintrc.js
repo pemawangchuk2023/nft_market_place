@@ -14,6 +14,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'no-console': 0,
+    'react/jsx-wrap-multilines': 'off',
     'jsx-a11y/label-has-associated-control': 0,
     'no-nested-ternary': 0,
     'consistent-return': 0,

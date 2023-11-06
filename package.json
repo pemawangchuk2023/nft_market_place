@@ -1,5 +1,5 @@
 {
-  "name": "nft_market",
+  "name": "ethereum-next",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,21 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-ethers": "2.0.5",
-    "@nomiclabs/hardhat-waffle": "2.0.3",
-    "@openzeppelin/contracts": "4.5.0",
-    "axios": "0.26.0",
-    "ethers": "5.5.4",
-    "hardhat": "2.9.0",
-    "ipfs-http-client": "56.0.1",
+    "@blazity/next-image-proxy": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "axios": "^0.26.1",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "form-data": "^4.0.0",
+    "hardhat": "^2.9.0",
+    "ipfs-http-client": "^56.0.3",
     "next": "12.1.0",
-    "next-themes": "0.1.1",
+    "next-themes": "^0.1.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-dropzone": "12.0.4",
-    "web3modal": "1.9.5"
+    "react-dropzone": "^12.0.4",
+    "web3.storage": "^4.5.5",
+    "web3modal": "^1.9.5"
   },
   "devDependencies": {
+    "@next/swc-darwin-arm64": "^13.5.5",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
