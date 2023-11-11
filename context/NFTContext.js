@@ -102,6 +102,7 @@ export const NFTProvider = ({ children }) => {
   };
 
   const fetchNFTs = async () => {
+    setIsLoadingNFT(false);
     const provider = new ethers.providers.JsonRpcProvider(
       process.env.NEXT_PUBLIC_ALCHEMY_API_ENDPOINT
     );
@@ -137,6 +138,7 @@ export const NFTProvider = ({ children }) => {
   };
 
   const fetchMyNFTsOrListedNFTs = async (type) => {
+    setIsLoadingNFT(false);
     const web3Modal = new Web3Modal();
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
@@ -187,8 +189,9 @@ export const NFTProvider = ({ children }) => {
     const transaction = await contract.createMarketSale(nft.tokenId, {
       value: price,
     });
-
+    setIsLoadingNFT(true);
     await transaction.wait();
+    setIsLoadingNFT(false);
   };
   return (
     <NFTContext.Provider
@@ -202,6 +205,7 @@ export const NFTProvider = ({ children }) => {
         fetchMyNFTsOrListedNFTs,
         buyNft,
         createSale,
+        isLoadingNFT,
       }}
     >
       {children}

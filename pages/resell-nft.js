@@ -12,7 +12,6 @@ const ResellNFT = () => {
   const [image, setImage] = useState('');
   const router = useRouter();
   const { id, tokenURI } = router.query;
-
   const fetchNFT = async () => {
     if (!tokenURI) return;
 
@@ -35,8 +34,8 @@ const ResellNFT = () => {
   if (isLoadingNFT) {
     return (
       <div
-        className="flexCenter"
-        style={{ height: '51vh' }}
+        className='flexCenter min-h-screen'
+        // style={{ height: '51vh' }}
       >
         <Loader />
       </div>
@@ -44,34 +43,34 @@ const ResellNFT = () => {
   }
 
   return (
-    <div className="flex justify-center sm:px-4 p-12">
-      <div className="w-3/5 md:w-full">
-        <h1 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl">
+    <div className='flex justify-center sm:px-4 p-12'>
+      <div className='w-3/5 md:w-full'>
+        <h1 className='font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl'>
           Resell NFT
         </h1>
 
         <Input
-          inputType="number"
-          title="Price"
-          placeholder="Asset Price"
+          inputType='number'
+          title='Price'
+          placeholder='Asset Price'
           handleClick={(e) => setPrice(e.target.value)}
         />
 
         {image && (
           <Image
             src={`/api/imageProxy?imageUrl=${encodeURIComponent(image)}`}
-            width="350"
-            height="350"
-            className="rounded mt-4"
-            layout="responsive"
+            width='350'
+            height='350'
+            className='rounded mt-4'
+            layout='responsive'
           />
         )}
 
-        <div className="mt-7 w-full flex justify-end">
+        <div className='mt-7 w-full flex justify-end'>
           <Button
-            btnName="List NFT"
-            btnType="primary"
-            classStyles="rounded-xl"
+            btnName='List NFT'
+            btnType='primary'
+            classStyles='rounded-xl'
             handleClick={resell}
           />
         </div>
