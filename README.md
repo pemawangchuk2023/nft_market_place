@@ -1,15 +1,17 @@
-# Basic Sample Hardhat Project
+## Overview
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Welcome to the NFT Marketplace project! This is a full-stack application designed to
+facilitate the creation, sale, and purchase of non-fungible tokens (NFTs) on the blockchain.
+Built using NextJS, this platform integrates blockchain technology for secure and efficient transactions.
 
-Try running some of the following tasks:
+## Features
+1. Create and list NFTs for sale.
+2. Buy and sell NFTs securely.
+3. Integration with Ethereum blockchain.
+4. IPFS integration for decentralized storage.
+5. Responsive UI compatible with various devices.
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+Contribution
+
+We welcome contributions to this project. Please read our contributing guidelines before submitting a pull request.
+
